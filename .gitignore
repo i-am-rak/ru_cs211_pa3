@@ -1,5 +1,6 @@
-#ignore executable formula
+# ignore executable formula
 *
 !*.*
 !*/
+/formula/NCRtmp.c
 #
