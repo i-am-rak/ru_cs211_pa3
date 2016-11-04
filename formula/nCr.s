@@ -29,7 +29,7 @@ nCr:
 Factorial:
   # Your code for Factorial should go here
 	cmpl    $0, %edi    #check if its less then 0
-    jle .L4             #go to L4 if less then zero
+    jl .L4             #go to L4 if less then zero
     movl	$1, %eax    #move 1 to eax(starting value)
 	movl	$1, %edx    #move 1 to edx(counter)
 .L1:
