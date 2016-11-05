@@ -15,21 +15,7 @@ int add(int a1, int a2){
 
 int dothething(int n){
     
-    int first = 1;
-    int second = 1;
-    int next = 0;
-    int i;
-    for (i = 0;i < n;i++){
-        if ( i <= 1)
-            next = 1;
-        else {
-            next = first + second;
-            first = second;
-            second = next;
-        }
-     //   printf("%d\n",next);
-    }
-    return next;
+    
 
 }
 
