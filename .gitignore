@@ -4,4 +4,6 @@
 !*/
 /formula/NCRtmp.c
 /formula/NCRtmp.s
+!/formula/makefile
+!/mystery/makefile
 #
