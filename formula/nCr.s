@@ -14,7 +14,7 @@ nCr:
 	subl	%esi, %edi  #subtract r from n and store in edi(n-r)
 	call	Factorial   #call factorial with value at edi(n-r), store in eax
 	movl	%ebx, %esi  #move ebx(r!) to esi
-	imull	%eax, %esi  #multiply  (n-r!) and r!, sotre
+	imull	%eax, %esi  #multiply  (n-r!) and r!, store
     jz .L6              #check if zero/overflow to prevent zero division
 	movl	%ecx, %eax  #move n! eax
 	cltd                #convert long to double(fix floating point exception)
@@ -29,7 +29,7 @@ nCr:
 Factorial:
   # Your code for Factorial should go here
 	cmpl    $0, %edi    #check if its less then 0
-    jl .L4             #go to L4 if less then zero
+    jl .L4              #go to L4 if less then zero
     movl	$1, %eax    #move 1 to eax(starting value)
 	movl	$1, %edx    #move 1 to edx(counter)
 .L1:
