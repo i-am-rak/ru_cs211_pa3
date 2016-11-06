@@ -11,9 +11,9 @@
 
 int num[200]; //Contains the first 200 numbers of fibonacci
 
-int add(int a1, int a2){
+int add(int x, int y){
 
-    return a1 + a2;
+    return x + y;
 }
 
 int dothething(int n){
