@@ -18,6 +18,9 @@ int add(int x, int y){
 
 int dothething(int n){
     int temp;
+    if(n > 200){
+        return 0;
+    }
     if(num[n] == -1){
         if(n == 0){
             temp = 0;
