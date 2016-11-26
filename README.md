@@ -28,8 +28,6 @@ Time Required = 50 microsecond
 
 $ ./formula 10
 
-1
-
 (1 + x)^10 = 1 + 10*x^1 + 45*x^2 + 120*x^3 + 210*x^4 + 252*x^5 + 210*x^6 + 120*x^7 + 45*x^8 + 10*x^9 + 1*x^10
 
 Time Required = 55 microsecond
