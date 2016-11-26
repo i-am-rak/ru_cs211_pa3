@@ -21,38 +21,40 @@ where the argument <power> should be a non-negative integer. Your program should
 For example:
 ```
 $ ./formula 5
-```
+
 (1 + x)^5 = 1 + 5*x^1 + 10*x^2 + 10*x^3 + 5*x^4 + 1*x^5
 
 Time Required = 50 microsecond
-```
+
 $ ./formula 10
-```
+
 1
 
 (1 + x)^10 = 1 + 10*x^1 + 45*x^2 + 120*x^3 + 210*x^4 + 252*x^5 + 210*x^6 + 120*x^7 + 45*x^8 + 10*x^9 + 1*x^10
 
 Time Required = 55 microsecond
+```
 
 (Hint: You can use the system call gettimeofday() to measure the running time of a chunk of code.)
 
 More generally, given the argument n, your code needs to generate:
 
-(1 + x)^n = 1 + nC1*x + nC2*x^2+ ... + nCr*x^r + ... + nCn*x^n
+>(1 + x)^n = 1 + nC1*x + nC2*x^2+ ... + nCr*x^r + ... + nCn*x^n
 
 Your program should also print a usage message if the user runs formula with the help flag (-h).
 
 For example:
 ```
 $ ./formula -h
-```
+
 Usage: formula <positive integer>
+```
 
 ###2.1 nCr Calculation
 
 Each of the nCr coefficents above is ”n choose r”. The nCr coeffcient can be computed using the
 
-formula: nCr = n!/(r!(n − r)!)
+>formula: nCr = n!/(r!(n − r)!)
 
 Your task is to implement this computation in Assembly. In particular, you need to implement two functions in Assembly:
 
@@ -76,8 +78,9 @@ The provided program takes a single integer as input.
 ```
 $ gcc -m32 -o mystery mystery.s
 $ ./mystery 41
-```
+
 Value: 165580141
+```
 
 Hint: This program performs a well known and easily recognizable computation. However, it
 includes an optimization to speedup the computation. You need to figure out both the basic
