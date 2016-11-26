@@ -3,8 +3,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <time.h>
+#include <sys/time.h>
 
 int main(int argc, char ** argv){
+
+    struct timeval start, end; // declare timeval type variables start and end 
+    gettimeofday(&start, NULL); //get start time
+
     int x = atoi(argv[1]);    
     if(argv[1][0] == '-' && argv[1][1] == 'h'){
         fprintf(stdout,"Usage: formula <positive integer>\n");
@@ -40,5 +46,10 @@ int main(int argc, char ** argv){
         }
         fprintf(stdout,"\n");
     }
+
+    gettimeofday(&end, NULL); //get end time
+    /* subtract start time from end time and print them in microseconds. */
+    printf("Time is %ld microseconds\n", ((end.tv_sec * 1000000 + end.tv_usec) - (start.tv_sec * 1000000 + start.tv_usec)));
+
     return 0;
 }
